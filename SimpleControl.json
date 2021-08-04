@@ -1,0 +1,355 @@
+[
+    {
+        "id": "e0b5470536da3afb",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "596f2797b742d54f",
+        "type": "ui_button",
+        "z": "e0b5470536da3afb",
+        "name": "UP_B",
+        "group": "b3493352ea7a223b",
+        "order": 2,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "label": "UP",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "num",
+        "topic": "control",
+        "topicType": "msg",
+        "x": 550,
+        "y": 100,
+        "wires": [
+            [
+                "b2829ed77c213f92"
+            ]
+        ],
+        "outputLabels": [
+            "UP"
+        ],
+        "info": "# UP"
+    },
+    {
+        "id": "c8b283f9d49d1220",
+        "type": "ui_button",
+        "z": "e0b5470536da3afb",
+        "name": "DOWN_B",
+        "group": "b3493352ea7a223b",
+        "order": 5,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "label": "DOWN",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "2",
+        "payloadType": "num",
+        "topic": "control",
+        "topicType": "msg",
+        "x": 560,
+        "y": 140,
+        "wires": [
+            [
+                "b2829ed77c213f92"
+            ]
+        ],
+        "outputLabels": [
+            "DOWN"
+        ]
+    },
+    {
+        "id": "2a1234e773fbedd6",
+        "type": "ui_button",
+        "z": "e0b5470536da3afb",
+        "name": "RIGHT_B",
+        "group": "b3493352ea7a223b",
+        "order": 6,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "label": "RIGHT",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "3",
+        "payloadType": "num",
+        "topic": "control",
+        "topicType": "msg",
+        "x": 560,
+        "y": 180,
+        "wires": [
+            [
+                "b2829ed77c213f92"
+            ]
+        ],
+        "outputLabels": [
+            "R"
+        ]
+    },
+    {
+        "id": "3d3a65b5a6ce8806",
+        "type": "ui_button",
+        "z": "e0b5470536da3afb",
+        "name": "LEFT_B",
+        "group": "b3493352ea7a223b",
+        "order": 4,
+        "width": "1",
+        "height": "1",
+        "passthru": true,
+        "label": "LEFT",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "4",
+        "payloadType": "num",
+        "topic": "control",
+        "topicType": "msg",
+        "x": 560,
+        "y": 220,
+        "wires": [
+            [
+                "b2829ed77c213f92"
+            ]
+        ],
+        "outputLabels": [
+            "L"
+        ]
+    },
+    {
+        "id": "b2829ed77c213f92",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "ControlMSG",
+        "topic": "SwimmingPixel/1_1/Control",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 790,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "083b85242852b1d5",
+        "type": "ui_button",
+        "z": "e0b5470536da3afb",
+        "name": "STOP_BT",
+        "group": "b3493352ea7a223b",
+        "order": 7,
+        "width": "3",
+        "height": "1",
+        "passthru": true,
+        "label": "STOP",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "control",
+        "topicType": "msg",
+        "x": 560,
+        "y": 260,
+        "wires": [
+            [
+                "b2829ed77c213f92"
+            ]
+        ],
+        "outputLabels": [
+            "L"
+        ]
+    },
+    {
+        "id": "500b6d820caf64e4",
+        "type": "ui_slider",
+        "z": "e0b5470536da3afb",
+        "name": "Speed",
+        "label": "Speed",
+        "tooltip": "",
+        "group": "b3493352ea7a223b",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "8",
+        "step": 1,
+        "x": 570,
+        "y": 400,
+        "wires": [
+            [
+                "beb4b19190d4aa3a"
+            ]
+        ]
+    },
+    {
+        "id": "c4ce7a5999c3a0c2",
+        "type": "Capture keys",
+        "z": "e0b5470536da3afb",
+        "name": "KeyboardCapture",
+        "x": 190,
+        "y": 160,
+        "wires": [
+            [
+                "e6968d26bea15151"
+            ]
+        ]
+    },
+    {
+        "id": "e6968d26bea15151",
+        "type": "switch",
+        "z": "e0b5470536da3afb",
+        "name": "KeyPress",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "61000",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "61008",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "61005",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "61003",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "57",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 340,
+        "y": 260,
+        "wires": [
+            [
+                "596f2797b742d54f"
+            ],
+            [
+                "c8b283f9d49d1220"
+            ],
+            [
+                "2a1234e773fbedd6"
+            ],
+            [
+                "3d3a65b5a6ce8806"
+            ],
+            [
+                "083b85242852b1d5"
+            ]
+        ]
+    },
+    {
+        "id": "beb4b19190d4aa3a",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "SpeedMSG",
+        "topic": "SwimmingPixel/1_1/Speed",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 790,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0a6ce397c0339e17",
+        "type": "ui_spacer",
+        "z": "e0b5470536da3afb",
+        "name": "spacer",
+        "group": "b3493352ea7a223b",
+        "order": 1,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "eab729407b339661",
+        "type": "ui_spacer",
+        "z": "e0b5470536da3afb",
+        "name": "spacer",
+        "group": "b3493352ea7a223b",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "b3493352ea7a223b",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "68cabf70c99084a0",
+        "order": 2,
+        "disp": true,
+        "width": "3",
+        "collapse": false
+    },
+    {
+        "id": "549a8d8c.df33f4",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "68cabf70c99084a0",
+        "type": "ui_tab",
+        "name": "Control",
+        "icon": "dashboard",
+        "order": ""
+    }
+]
