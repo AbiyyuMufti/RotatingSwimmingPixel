@@ -1,4 +1,3 @@
-#include <analogWrite.h>
 #include <Arduino.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -19,9 +18,9 @@ String clientnames[] = {"1_1", "2_1", "3_1", "4_1",
 String clientname = clientnames[ESPPOSITION-1];
 EspMQTTClient client(SSID, PASS, BROKER, clientname.c_str());
 
-String activationTopics = "SwimmingPixel/" + clientname + "/Activation";
-String controlTopics = "SwimmingPixel/" + clientname + "/Control";
-String speedTopics = "SwimmingPixel/" + clientname + "/Speed";
+String activationTopics = "SwimmingPixel/Movement/" + clientname + "/Activation";
+String controlTopics = "SwimmingPixel/Movement/" + clientname + "/Control";
+String speedTopics = "SwimmingPixel/Movement/" + clientname + "/Speed";
 
 enum direction{ stop=0, up, down, right, left };
 String str_dir[] = { "stop", "up", "down", "right", "left"};
