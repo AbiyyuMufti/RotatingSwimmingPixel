@@ -2,25 +2,27 @@
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
 #include <Wire.h>
-#include "EspMQTTClient.h"
+#include <ArduinoJson.h>
+#include <EspMQTTClient.h>
 #include "ft_ESP32_IOobjects.h"
 
-#define ESPPOSITION 1
+#define ESPPOSITION 3
 #define BROKER "test.mosquitto.org"
-#define SSID "FRITZ!Box 7590 VL"
-#define PASS "56616967766283031728"
+#define SSID "JuergenWalter"
+#define PASS "44873763559236747268"
+// #define SSID "FRITZ!Box 7590 VL"
+// #define PASS "56616967766283031728"
 #define PORT 1883
 
-String clientnames[] = {"1_1", "2_1", "3_1", "4_1", 
-                        "1_2", "2_2", "3_2", "4_2",
-                        "1_3", "2_3", "3_3", "4_3",
-                        "1_4", "2_4", "3_4", "4_4"};
+String clientnames[] = {"1_1", "1_2", "1_3", "1_4", 
+                        "2_1", "2_2", "2_3", "2_4", 
+                        "3_1", "3_2", "3_3", "3_4",
+                        "4_1", "4_2", "4_3", "4_4"};
 String clientname = clientnames[ESPPOSITION-1];
 EspMQTTClient client(SSID, PASS, BROKER, clientname.c_str());
 
-String activationTopics = "SwimmingPixel/Movement/" + clientname + "/Activation";
-String controlTopics = "SwimmingPixel/Movement/" + clientname + "/Control";
-String speedTopics = "SwimmingPixel/Movement/" + clientname + "/Speed";
+String activationTopics = "SwimmingPixel/Motion/" + clientname + "/Activation";
+String controlTopics = "SwimmingPixel/Motion/" + clientname + "/Control";
 
 enum direction{ stop=0, up, down, right, left };
 String str_dir[] = { "stop", "up", "down", "right", "left"};
@@ -162,13 +164,15 @@ void onSpeedCallback(const String& message)
 
 void onControlCallback(const String& message)
 {
-  controlDir = message.toInt();
+  StaticJsonDocument<64> doc;
+  DeserializationError error = deserializeJson(doc, message);
+  controlDir =  (int)doc["control"]; // 3
+  speed = (int)doc["speed"]; // 1
 }
 
 void onConnectionEstablished()
 {
   // If ESP Active and Connected publish 1 and retain the message
   client.publish(activationTopics, "1", true);
-  client.subscribe(speedTopics, onSpeedCallback);
   client.subscribe(controlTopics, onControlCallback);
 }
