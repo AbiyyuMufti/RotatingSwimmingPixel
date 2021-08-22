@@ -171,7 +171,7 @@
         "topic": "payload",
         "topicType": "msg",
         "x": 490,
-        "y": 40,
+        "y": 100,
         "wires": [
             [
                 "8bdfe9cdc3fc2dd4"
@@ -202,7 +202,7 @@
         "topic": "payload",
         "topicType": "msg",
         "x": 500,
-        "y": 80,
+        "y": 140,
         "wires": [
             [
                 "8bdfe9cdc3fc2dd4"
@@ -232,7 +232,7 @@
         "topic": "payload",
         "topicType": "msg",
         "x": 500,
-        "y": 120,
+        "y": 180,
         "wires": [
             [
                 "8bdfe9cdc3fc2dd4"
@@ -262,7 +262,7 @@
         "topic": "payload",
         "topicType": "msg",
         "x": 500,
-        "y": 160,
+        "y": 220,
         "wires": [
             [
                 "8bdfe9cdc3fc2dd4"
@@ -291,8 +291,8 @@
         "payloadType": "num",
         "topic": "payload",
         "topicType": "msg",
-        "x": 500,
-        "y": 200,
+        "x": 510,
+        "y": 260,
         "wires": [
             [
                 "8bdfe9cdc3fc2dd4"
@@ -320,8 +320,8 @@
         "min": 0,
         "max": "8",
         "step": 1,
-        "x": 270,
-        "y": 280,
+        "x": 630,
+        "y": 40,
         "wires": [
             [
                 "aac948e45958c212"
@@ -333,8 +333,8 @@
         "type": "Capture keys",
         "z": "e0b5470536da3afb",
         "name": "KeyCapture",
-        "x": 150,
-        "y": 160,
+        "x": 110,
+        "y": 200,
         "wires": [
             [
                 "e6968d26bea15151"
@@ -379,7 +379,7 @@
         "repair": false,
         "outputs": 5,
         "x": 300,
-        "y": 160,
+        "y": 200,
         "wires": [
             [
                 "596f2797b742d54f"
@@ -412,8 +412,8 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1230,
-        "y": 180,
+        "x": 1330,
+        "y": 60,
         "wires": []
     },
     {
@@ -435,11 +435,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 460,
-        "y": 280,
+        "x": 800,
+        "y": 120,
         "wires": [
             [
-                "8b779a58e554b046"
+                "b04a8bc878626fed"
             ]
         ]
     },
@@ -462,26 +462,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 720,
-        "y": 100,
-        "wires": [
-            [
-                "8b779a58e554b046"
-            ]
-        ]
-    },
-    {
-        "id": "8b779a58e554b046",
-        "type": "function",
-        "z": "e0b5470536da3afb",
-        "name": "set_control",
-        "func": "msg.payload = {\"speed\": flow.get(\"speed\"), \"control\": flow.get(\"control\")}\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 790,
+        "x": 800,
         "y": 240,
         "wires": [
             [
@@ -501,8 +482,8 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 620,
+        "x": 490,
+        "y": 400,
         "wires": [
             [
                 "0604180a205b810e"
@@ -513,7 +494,7 @@
         "id": "9044df6dc71673e6",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 2,
+        "order": 1,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -536,8 +517,8 @@
         "shape": "square",
         "showGlow": false,
         "name": "1_1",
-        "x": 590,
-        "y": 580,
+        "x": 490,
+        "y": 360,
         "wires": []
     },
     {
@@ -552,8 +533,8 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 700,
+        "x": 490,
+        "y": 480,
         "wires": [
             [
                 "30c9ab61dbb8aa67"
@@ -564,7 +545,7 @@
         "id": "f7a27cc3b6994d87",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 4,
+        "order": 3,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -585,10 +566,10 @@
         ],
         "allowColorForValueInMessage": false,
         "shape": "square",
-        "showGlow": true,
+        "showGlow": false,
         "name": "1_2",
-        "x": 590,
-        "y": 660,
+        "x": 490,
+        "y": 440,
         "wires": []
     },
     {
@@ -603,8 +584,8 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 780,
+        "x": 490,
+        "y": 560,
         "wires": [
             [
                 "1f207dc7410c8365"
@@ -615,7 +596,7 @@
         "id": "c9628a2765594750",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 6,
+        "order": 5,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -636,10 +617,10 @@
         ],
         "allowColorForValueInMessage": false,
         "shape": "square",
-        "showGlow": true,
+        "showGlow": false,
         "name": "1_3",
-        "x": 590,
-        "y": 740,
+        "x": 490,
+        "y": 520,
         "wires": []
     },
     {
@@ -654,8 +635,8 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 860,
+        "x": 490,
+        "y": 640,
         "wires": [
             [
                 "50f68b4aad6452bc"
@@ -666,7 +647,7 @@
         "id": "4bf7631c558a3018",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 8,
+        "order": 7,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -687,10 +668,10 @@
         ],
         "allowColorForValueInMessage": false,
         "shape": "square",
-        "showGlow": true,
+        "showGlow": false,
         "name": "1_4",
-        "x": 590,
-        "y": 820,
+        "x": 490,
+        "y": 600,
         "wires": []
     },
     {
@@ -701,7 +682,7 @@
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 3,
+        "order": 2,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -718,8 +699,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 730,
-        "y": 620,
+        "x": 630,
+        "y": 400,
         "wires": [
             [
                 "31a207dfda9c15ee"
@@ -734,7 +715,7 @@
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 5,
+        "order": 4,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -751,8 +732,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 730,
-        "y": 700,
+        "x": 630,
+        "y": 480,
         "wires": [
             [
                 "06522baa873558a6"
@@ -767,7 +748,7 @@
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 7,
+        "order": 6,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -784,8 +765,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 730,
-        "y": 780,
+        "x": 630,
+        "y": 560,
         "wires": [
             [
                 "b90b46dd0be0fd1e"
@@ -800,7 +781,7 @@
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 9,
+        "order": 8,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -817,8 +798,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 730,
-        "y": 860,
+        "x": 630,
+        "y": 640,
         "wires": [
             [
                 "2d11f2bd6912dd7e"
@@ -837,8 +818,8 @@
         "nl": false,
         "rap": true,
         "rh": 0,
-        "x": 100,
-        "y": 980,
+        "x": 80,
+        "y": 920,
         "wires": [
             [
                 "00e86a5d64b518e4"
@@ -937,8 +918,8 @@
         "checkall": "true",
         "repair": true,
         "outputs": 16,
-        "x": 290,
-        "y": 980,
+        "x": 250,
+        "y": 920,
         "wires": [
             [
                 "9044df6dc71673e6",
@@ -1018,8 +999,8 @@
                 "type": "str"
             }
         ],
-        "x": 1110,
-        "y": 920,
+        "x": 490,
+        "y": 720,
         "wires": [
             [
                 "5b08c8590c32981e"
@@ -1030,7 +1011,7 @@
         "id": "3f80312a0dc641dc",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 10,
+        "order": 9,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -1053,8 +1034,8 @@
         "shape": "square",
         "showGlow": false,
         "name": "2_1",
-        "x": 1110,
-        "y": 880,
+        "x": 490,
+        "y": 680,
         "wires": []
     },
     {
@@ -1069,8 +1050,8 @@
                 "type": "str"
             }
         ],
-        "x": 1110,
-        "y": 1000,
+        "x": 490,
+        "y": 800,
         "wires": [
             [
                 "b6b16acd6b668a7a"
@@ -1081,7 +1062,7 @@
         "id": "31c873fb1f0a49ae",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 12,
+        "order": 11,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -1104,8 +1085,8 @@
         "shape": "square",
         "showGlow": true,
         "name": "2_2",
-        "x": 1110,
-        "y": 960,
+        "x": 490,
+        "y": 760,
         "wires": []
     },
     {
@@ -1120,8 +1101,8 @@
                 "type": "str"
             }
         ],
-        "x": 1110,
-        "y": 1080,
+        "x": 490,
+        "y": 880,
         "wires": [
             [
                 "1f1799eed420eaf7"
@@ -1132,7 +1113,7 @@
         "id": "d16654457a17d62b",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 14,
+        "order": 13,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -1155,8 +1136,8 @@
         "shape": "square",
         "showGlow": true,
         "name": "2_3",
-        "x": 1110,
-        "y": 1040,
+        "x": 490,
+        "y": 840,
         "wires": []
     },
     {
@@ -1171,8 +1152,8 @@
                 "type": "str"
             }
         ],
-        "x": 1110,
-        "y": 1160,
+        "x": 490,
+        "y": 960,
         "wires": [
             [
                 "05b6f4e19a1b28f9"
@@ -1183,7 +1164,7 @@
         "id": "71d8e45389dd1d05",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 16,
+        "order": 15,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -1206,8 +1187,8 @@
         "shape": "square",
         "showGlow": true,
         "name": "2_4",
-        "x": 1110,
-        "y": 1120,
+        "x": 490,
+        "y": 920,
         "wires": []
     },
     {
@@ -1218,7 +1199,7 @@
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 11,
+        "order": 10,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1235,8 +1216,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 1250,
-        "y": 920,
+        "x": 630,
+        "y": 720,
         "wires": [
             [
                 "009db87eb8d6c4f5"
@@ -1251,7 +1232,7 @@
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 13,
+        "order": 12,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1268,8 +1249,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 1250,
-        "y": 1000,
+        "x": 630,
+        "y": 800,
         "wires": [
             [
                 "a9f796b8419b26a6"
@@ -1284,7 +1265,7 @@
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 15,
+        "order": 14,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1301,8 +1282,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 1250,
-        "y": 1080,
+        "x": 630,
+        "y": 880,
         "wires": [
             [
                 "52044b7ba1104096"
@@ -1317,7 +1298,7 @@
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 17,
+        "order": 16,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1334,8 +1315,8 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 1250,
-        "y": 1160,
+        "x": 630,
+        "y": 960,
         "wires": [
             [
                 "c2dc586cf8c5c998"
@@ -1354,8 +1335,8 @@
                 "type": "str"
             }
         ],
-        "x": 1110,
-        "y": 1240,
+        "x": 490,
+        "y": 1040,
         "wires": [
             [
                 "3c51865f5e85eaec"
@@ -1366,7 +1347,7 @@
         "id": "6ce93e1b1124bdef",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 18,
+        "order": 17,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -1388,9 +1369,9 @@
         "allowColorForValueInMessage": false,
         "shape": "square",
         "showGlow": false,
-        "name": "",
-        "x": 1110,
-        "y": 1200,
+        "name": "3_1",
+        "x": 490,
+        "y": 1000,
         "wires": []
     },
     {
@@ -1405,8 +1386,8 @@
                 "type": "str"
             }
         ],
-        "x": 1110,
-        "y": 1320,
+        "x": 490,
+        "y": 1120,
         "wires": [
             [
                 "c24c3ca14c053d88"
@@ -1417,11 +1398,11 @@
         "id": "2e253f680e3588dd",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 24,
+        "order": 19,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
-        "label": "1_2",
+        "label": "3_2",
         "labelPlacement": "left",
         "labelAlignment": "left",
         "colorForValue": [
@@ -1439,9 +1420,9 @@
         "allowColorForValueInMessage": false,
         "shape": "square",
         "showGlow": true,
-        "name": "",
-        "x": 1110,
-        "y": 1280,
+        "name": "3_2",
+        "x": 490,
+        "y": 1080,
         "wires": []
     },
     {
@@ -1456,8 +1437,8 @@
                 "type": "str"
             }
         ],
-        "x": 1110,
-        "y": 1400,
+        "x": 490,
+        "y": 1200,
         "wires": [
             [
                 "5007b2e5d327269e"
@@ -1468,7 +1449,7 @@
         "id": "99bb418fdf0ac5e5",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 28,
+        "order": 21,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -1490,9 +1471,9 @@
         "allowColorForValueInMessage": false,
         "shape": "square",
         "showGlow": true,
-        "name": "",
-        "x": 1110,
-        "y": 1360,
+        "name": "3_3",
+        "x": 490,
+        "y": 1160,
         "wires": []
     },
     {
@@ -1507,8 +1488,8 @@
                 "type": "str"
             }
         ],
-        "x": 1110,
-        "y": 1480,
+        "x": 490,
+        "y": 1280,
         "wires": [
             [
                 "83b4ac39ab0f7514"
@@ -1519,7 +1500,7 @@
         "id": "7e0bf095289a1f33",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 32,
+        "order": 23,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -1541,20 +1522,20 @@
         "allowColorForValueInMessage": false,
         "shape": "square",
         "showGlow": true,
-        "name": "",
-        "x": 1110,
-        "y": 1440,
+        "name": "3_4",
+        "x": 490,
+        "y": 1240,
         "wires": []
     },
     {
         "id": "3c51865f5e85eaec",
         "type": "ui_switch",
         "z": "e0b5470536da3afb",
-        "name": "",
+        "name": "3_1b",
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 19,
+        "order": 18,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1571,21 +1552,23 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 1250,
-        "y": 1240,
+        "x": 630,
+        "y": 1040,
         "wires": [
-            []
+            [
+                "dc21b921c9709578"
+            ]
         ]
     },
     {
         "id": "c24c3ca14c053d88",
         "type": "ui_switch",
         "z": "e0b5470536da3afb",
-        "name": "",
+        "name": "3_2b",
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 23,
+        "order": 20,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1602,21 +1585,23 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 1250,
-        "y": 1320,
+        "x": 630,
+        "y": 1120,
         "wires": [
-            []
+            [
+                "826040ba87e7997b"
+            ]
         ]
     },
     {
         "id": "5007b2e5d327269e",
         "type": "ui_switch",
         "z": "e0b5470536da3afb",
-        "name": "",
+        "name": "3_3b",
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 27,
+        "order": 22,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1633,21 +1618,23 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 1250,
-        "y": 1400,
+        "x": 630,
+        "y": 1200,
         "wires": [
-            []
+            [
+                "8a521667e1118859"
+            ]
         ]
     },
     {
         "id": "83b4ac39ab0f7514",
         "type": "ui_switch",
         "z": "e0b5470536da3afb",
-        "name": "",
+        "name": "3_4b",
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 31,
+        "order": 24,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1664,10 +1651,12 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 1250,
-        "y": 1480,
+        "x": 630,
+        "y": 1280,
         "wires": [
-            []
+            [
+                "5b60a42c7aa7dcd6"
+            ]
         ]
     },
     {
@@ -1682,8 +1671,8 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 1200,
+        "x": 490,
+        "y": 1360,
         "wires": [
             [
                 "4cc0820af410ee06"
@@ -1694,7 +1683,7 @@
         "id": "823b1ef2ca66d5d3",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 20,
+        "order": 25,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
@@ -1716,9 +1705,9 @@
         "allowColorForValueInMessage": false,
         "shape": "square",
         "showGlow": false,
-        "name": "",
-        "x": 590,
-        "y": 1160,
+        "name": "4_1",
+        "x": 490,
+        "y": 1320,
         "wires": []
     },
     {
@@ -1733,8 +1722,8 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 1280,
+        "x": 490,
+        "y": 1440,
         "wires": [
             [
                 "c5867f6c7e4d2b0a"
@@ -1745,11 +1734,11 @@
         "id": "d7f6813e9d61e667",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 22,
+        "order": 27,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
-        "label": "2_2",
+        "label": "4_2",
         "labelPlacement": "left",
         "labelAlignment": "left",
         "colorForValue": [
@@ -1767,9 +1756,9 @@
         "allowColorForValueInMessage": false,
         "shape": "square",
         "showGlow": true,
-        "name": "",
-        "x": 590,
-        "y": 1240,
+        "name": "4_2",
+        "x": 490,
+        "y": 1400,
         "wires": []
     },
     {
@@ -1784,8 +1773,8 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 1360,
+        "x": 490,
+        "y": 1520,
         "wires": [
             [
                 "30e5b3b18a74f7d1"
@@ -1796,11 +1785,11 @@
         "id": "7660a7a87c1b10cc",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 26,
+        "order": 29,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
-        "label": "2_3",
+        "label": "4_3",
         "labelPlacement": "left",
         "labelAlignment": "left",
         "colorForValue": [
@@ -1818,9 +1807,9 @@
         "allowColorForValueInMessage": false,
         "shape": "square",
         "showGlow": true,
-        "name": "",
-        "x": 590,
-        "y": 1320,
+        "name": "4_3",
+        "x": 490,
+        "y": 1480,
         "wires": []
     },
     {
@@ -1835,8 +1824,8 @@
                 "type": "str"
             }
         ],
-        "x": 590,
-        "y": 1440,
+        "x": 490,
+        "y": 1600,
         "wires": [
             [
                 "e1a1a87643df3339"
@@ -1847,11 +1836,11 @@
         "id": "2e3a1bdf3029cd77",
         "type": "ui_led",
         "z": "e0b5470536da3afb",
-        "order": 30,
+        "order": 31,
         "group": "544cd4a12a1c769f",
         "width": "2",
         "height": "1",
-        "label": "2_4",
+        "label": "4_4",
         "labelPlacement": "left",
         "labelAlignment": "left",
         "colorForValue": [
@@ -1869,20 +1858,20 @@
         "allowColorForValueInMessage": false,
         "shape": "square",
         "showGlow": true,
-        "name": "",
-        "x": 590,
-        "y": 1400,
+        "name": "4_4",
+        "x": 490,
+        "y": 1560,
         "wires": []
     },
     {
         "id": "4cc0820af410ee06",
         "type": "ui_switch",
         "z": "e0b5470536da3afb",
-        "name": "",
+        "name": "4_1b",
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 21,
+        "order": 26,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1899,21 +1888,23 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 730,
-        "y": 1200,
+        "x": 630,
+        "y": 1360,
         "wires": [
-            []
+            [
+                "411c34c07315f160"
+            ]
         ]
     },
     {
         "id": "c5867f6c7e4d2b0a",
         "type": "ui_switch",
         "z": "e0b5470536da3afb",
-        "name": "",
+        "name": "4_2b",
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 25,
+        "order": 28,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1930,21 +1921,23 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 730,
-        "y": 1280,
+        "x": 630,
+        "y": 1440,
         "wires": [
-            []
+            [
+                "fa2ab401d0db9f55"
+            ]
         ]
     },
     {
         "id": "30e5b3b18a74f7d1",
         "type": "ui_switch",
         "z": "e0b5470536da3afb",
-        "name": "",
+        "name": "4_3b",
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 29,
+        "order": 30,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1961,21 +1954,23 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 730,
-        "y": 1360,
+        "x": 630,
+        "y": 1520,
         "wires": [
-            []
+            [
+                "476ee01f20417382"
+            ]
         ]
     },
     {
         "id": "e1a1a87643df3339",
         "type": "ui_switch",
         "z": "e0b5470536da3afb",
-        "name": "",
+        "name": "4_4b",
         "label": "",
         "tooltip": "",
         "group": "544cd4a12a1c769f",
-        "order": 33,
+        "order": 32,
         "width": "1",
         "height": "1",
         "passthru": true,
@@ -1992,27 +1987,12 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 730,
-        "y": 1440,
+        "x": 630,
+        "y": 1600,
         "wires": [
-            []
-        ]
-    },
-    {
-        "id": "ef6d2e77304c6f54",
-        "type": "function",
-        "z": "e0b5470536da3afb",
-        "name": "",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 150,
-        "y": 1200,
-        "wires": [
-            []
+            [
+                "306cf0437e19075e"
+            ]
         ]
     },
     {
@@ -2030,13 +2010,14 @@
         "once": true,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "1",
+        "payload": "0",
         "payloadType": "str",
-        "x": 120,
-        "y": 280,
+        "x": 470,
+        "y": 40,
         "wires": [
             [
-                "500b6d820caf64e4"
+                "500b6d820caf64e4",
+                "8bdfe9cdc3fc2dd4"
             ]
         ]
     },
@@ -2059,8 +2040,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1500,
-        "y": 620,
+        "x": 820,
+        "y": 400,
         "wires": [
             []
         ]
@@ -2079,8 +2060,8 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1250,
-        "y": 220,
+        "x": 1330,
+        "y": 100,
         "wires": []
     },
     {
@@ -2097,8 +2078,8 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1230,
-        "y": 260,
+        "x": 1330,
+        "y": 140,
         "wires": []
     },
     {
@@ -2115,23 +2096,23 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1290,
-        "y": 360,
+        "x": 1330,
+        "y": 180,
         "wires": []
     },
     {
         "id": "b04a8bc878626fed",
         "type": "function",
         "z": "e0b5470536da3afb",
-        "name": "enable",
-        "func": "var ar = flow.get(\"array\")\nvar tosend = [null, null, null, null]\nfor (i=0;i<4;i++){\n    if(ar[i])\n        tosend[i] = msg;\n}\nreturn tosend",
-        "outputs": 4,
+        "name": "set_control_and_send",
+        "func": "msg.payload = {\"speed\": flow.get(\"speed\"), \"control\": flow.get(\"control\")}\nvar ar = flow.get(\"array\")\nvar tosend = [null, null, null, null,\n            null, null, null, null,\n            null, null, null, null,\n            null, null, null, null]\n\nfor (i=0;i<16;i++){\n    if(ar[i])\n        tosend[i] = msg;\n}\nreturn tosend",
+        "outputs": 16,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1010,
-        "y": 260,
+        "x": 1060,
+        "y": 160,
         "wires": [
             [
                 "beb4b19190d4aa3a"
@@ -2144,6 +2125,42 @@
             ],
             [
                 "d6b71952f4280a4a"
+            ],
+            [
+                "944a4b7f9a41b954"
+            ],
+            [
+                "19756448c36fda9c"
+            ],
+            [
+                "86d799a306ec24e5"
+            ],
+            [
+                "e3673980c992928b"
+            ],
+            [
+                "106414ec58174692"
+            ],
+            [
+                "17f7303ba1bf97fb"
+            ],
+            [
+                "b3d2f06859e86150"
+            ],
+            [
+                "43402bbf9033d478"
+            ],
+            [
+                "7157eae0a43e0e07"
+            ],
+            [
+                "17d72ae34bfcc461"
+            ],
+            [
+                "549c27f7343af240"
+            ],
+            [
+                "0bcb4136454e1c66"
             ]
         ]
     },
@@ -2166,8 +2183,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1500,
-        "y": 700,
+        "x": 820,
+        "y": 480,
         "wires": [
             []
         ]
@@ -2191,8 +2208,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1500,
-        "y": 780,
+        "x": 820,
+        "y": 560,
         "wires": [
             []
         ]
@@ -2216,8 +2233,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1500,
-        "y": 860,
+        "x": 820,
+        "y": 640,
         "wires": [
             []
         ]
@@ -2241,8 +2258,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
-        "y": 920,
+        "x": 820,
+        "y": 720,
         "wires": [
             []
         ]
@@ -2266,8 +2283,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
-        "y": 1000,
+        "x": 820,
+        "y": 800,
         "wires": [
             []
         ]
@@ -2291,8 +2308,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
-        "y": 1080,
+        "x": 820,
+        "y": 880,
         "wires": [
             []
         ]
@@ -2316,8 +2333,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1480,
-        "y": 1160,
+        "x": 820,
+        "y": 960,
         "wires": [
             []
         ]
@@ -2341,8 +2358,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1500,
-        "y": 1220,
+        "x": 820,
+        "y": 1040,
         "wires": [
             []
         ]
@@ -2366,8 +2383,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1500,
-        "y": 1300,
+        "x": 820,
+        "y": 1120,
         "wires": [
             []
         ]
@@ -2391,8 +2408,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1510,
-        "y": 1380,
+        "x": 830,
+        "y": 1200,
         "wires": [
             []
         ]
@@ -2416,8 +2433,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1510,
-        "y": 1460,
+        "x": 830,
+        "y": 1280,
         "wires": [
             []
         ]
@@ -2441,8 +2458,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1490,
-        "y": 1520,
+        "x": 830,
+        "y": 1360,
         "wires": [
             []
         ]
@@ -2466,8 +2483,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1490,
-        "y": 1580,
+        "x": 830,
+        "y": 1440,
         "wires": [
             []
         ]
@@ -2491,8 +2508,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1490,
-        "y": 1640,
+        "x": 830,
+        "y": 1520,
         "wires": [
             []
         ]
@@ -2516,11 +2533,227 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1450,
-        "y": 1720,
+        "x": 830,
+        "y": 1600,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "944a4b7f9a41b954",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "2_1/Control",
+        "topic": "SwimmingPixel/Motion/2_1/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "19756448c36fda9c",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "2_2/Control",
+        "topic": "SwimmingPixel/Motion/2_2/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "86d799a306ec24e5",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "2_3/Control",
+        "topic": "SwimmingPixel/Motion/2_3/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e3673980c992928b",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "2_4/Control",
+        "topic": "SwimmingPixel/Motion/2_4/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "106414ec58174692",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "3_1/Control",
+        "topic": "SwimmingPixel/Motion/3_1/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "17f7303ba1bf97fb",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "3_2/Control",
+        "topic": "SwimmingPixel/Motion/3_2/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b3d2f06859e86150",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "3_3/Control",
+        "topic": "SwimmingPixel/Motion/1_3/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "43402bbf9033d478",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "3_4/Control",
+        "topic": "SwimmingPixel/Motion/1_4/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7157eae0a43e0e07",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "3_1/Control",
+        "topic": "SwimmingPixel/Motion/2_1/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "17d72ae34bfcc461",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "3_2/Control",
+        "topic": "SwimmingPixel/Motion/2_2/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "549c27f7343af240",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "3_3/Control",
+        "topic": "SwimmingPixel/Motion/2_3/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "0bcb4136454e1c66",
+        "type": "mqtt out",
+        "z": "e0b5470536da3afb",
+        "name": "3_4/Control",
+        "topic": "SwimmingPixel/Motion/2_4/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1330,
+        "y": 660,
+        "wires": []
     },
     {
         "id": "0a6ce397c0339e17",
@@ -2636,8 +2869,7 @@
         "willQos": "0",
         "willPayload": "",
         "willMsg": {},
-        "sessionExpiry": "",
-        "credentials": {}
+        "sessionExpiry": ""
     },
     {
         "id": "544cd4a12a1c769f",

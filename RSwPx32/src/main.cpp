@@ -7,11 +7,16 @@
 #include "ft_ESP32_IOobjects.h"
 
 #define ESPPOSITION 3
-#define BROKER "test.mosquitto.org"
-#define SSID "JuergenWalter"
-#define PASS "44873763559236747268"
+// #define BROKER "test.mosquitto.org"
+// #define BROKER "192.168.188.100";
+// #define BROKER "192.168.188.26"
+#define BROKER "192.168.137.1"
+// #define SSID "JuergenWalter"
+// #define PASS "44873763559236747268"
 // #define SSID "FRITZ!Box 7590 VL"
 // #define PASS "56616967766283031728"
+#define SSID "AbiyyuMufti"
+#define PASS "MaMh1234"
 #define PORT 1883
 
 String clientnames[] = {"1_1", "1_2", "1_3", "1_4", 
@@ -59,7 +64,7 @@ void setup() {
   // If ESP inactive after 5 seconds publish 0 as last will 
   client.setKeepAlive(5);
   client.enableLastWillMessage(activationTopics.c_str(), "0", true);
-  // client.enableDebuggingMessages();
+  client.enableDebuggingMessages();
 
 }
 
@@ -129,7 +134,7 @@ bool connectionOk()
   buttonState = digitalRead(35);
   if(buttonState == LOW || counterStarted){
     static long lastTime = millis();
-    Serial.println(msgs);
+    // Serial.println(msgs);
     if(!counterStarted) {
       lastTime = millis();
       display.setCursor(0,0);
@@ -165,7 +170,7 @@ void onSpeedCallback(const String& message)
 void onControlCallback(const String& message)
 {
   StaticJsonDocument<64> doc;
-  DeserializationError error = deserializeJson(doc, message);
+  deserializeJson(doc, message);
   controlDir =  (int)doc["control"]; // 3
   speed = (int)doc["speed"]; // 1
 }
