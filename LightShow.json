@@ -1,0 +1,3049 @@
+[
+    {
+        "id": "428b5af189e091d7",
+        "type": "subflow",
+        "name": "OneOneOtherOff",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 160,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "f032db69f4226e18"
+                    },
+                    {
+                        "id": "b2ed93f14e043659"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 520,
+                "y": 80,
+                "wires": [
+                    {
+                        "id": "f032db69f4226e18",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 520,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "b2ed93f14e043659",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "b2ed93f14e043659",
+        "type": "change",
+        "z": "428b5af189e091d7",
+        "name": "set_turn_off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "rgb(0, 0, 0)",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f032db69f4226e18",
+        "type": "change",
+        "z": "428b5af189e091d7",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "822a2cca8c69b658",
+        "type": "tab",
+        "label": "LightShow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "6b669181bce63e47",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 1,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "1_1",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "1_1",
+        "x": 490,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "c5c37e764ba46d27",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 3,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "1_2",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "1_2",
+        "x": 490,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "b51aa898d84360bf",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 5,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "1_3",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "1_3",
+        "x": 490,
+        "y": 1620,
+        "wires": []
+    },
+    {
+        "id": "ebf7cc81eb2964d9",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 7,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "1_4",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "1_4",
+        "x": 490,
+        "y": 1660,
+        "wires": []
+    },
+    {
+        "id": "0330e2c46fbe768b",
+        "type": "mqtt in",
+        "z": "822a2cca8c69b658",
+        "name": "Activation",
+        "topic": "SwimmingPixel/Lightshow/+/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 80,
+        "y": 1820,
+        "wires": [
+            [
+                "96d66cfb6dda1fa4"
+            ]
+        ]
+    },
+    {
+        "id": "96d66cfb6dda1fa4",
+        "type": "switch",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/1_1/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/1_2/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/1_3/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/1_4/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/2_1/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/2_2/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/2_3/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/2_4/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/3_1/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/3_2/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/3_3/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/3_4/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/4_1/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/4_2/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/4_3/Activation",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "SwimmingPixel/Lightshow/4_4/Activation",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": true,
+        "outputs": 16,
+        "x": 250,
+        "y": 1820,
+        "wires": [
+            [
+                "6b669181bce63e47"
+            ],
+            [
+                "c5c37e764ba46d27"
+            ],
+            [
+                "b51aa898d84360bf"
+            ],
+            [
+                "ebf7cc81eb2964d9"
+            ],
+            [
+                "c6262003b26e8d68"
+            ],
+            [
+                "d39c6340684b5c61"
+            ],
+            [
+                "6853cb9a90680ad2"
+            ],
+            [
+                "48e63f268a3bd6b6"
+            ],
+            [
+                "3ba74e53f72ec9aa"
+            ],
+            [
+                "09cfa9c16ed4256d"
+            ],
+            [
+                "6707ae0c462f5ffb"
+            ],
+            [
+                "406ad5dcdf9ae4e0"
+            ],
+            [
+                "936eba1d09241e61"
+            ],
+            [
+                "81a67fd07e0b1dc6"
+            ],
+            [
+                "94e4b752f983b5d0"
+            ],
+            [
+                "6c7957d0b2d98311"
+            ]
+        ]
+    },
+    {
+        "id": "c6262003b26e8d68",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 9,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "2_1",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "2_1",
+        "x": 490,
+        "y": 1700,
+        "wires": []
+    },
+    {
+        "id": "d39c6340684b5c61",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 11,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "2_2",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "2_2",
+        "x": 490,
+        "y": 1740,
+        "wires": []
+    },
+    {
+        "id": "6853cb9a90680ad2",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 13,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "2_3",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "2_3",
+        "x": 490,
+        "y": 1780,
+        "wires": []
+    },
+    {
+        "id": "48e63f268a3bd6b6",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 15,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "2_4",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "2_4",
+        "x": 490,
+        "y": 1820,
+        "wires": []
+    },
+    {
+        "id": "3ba74e53f72ec9aa",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 17,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "3_1",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "3_1",
+        "x": 490,
+        "y": 1860,
+        "wires": []
+    },
+    {
+        "id": "09cfa9c16ed4256d",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 19,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "3_2",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "3_2",
+        "x": 490,
+        "y": 1900,
+        "wires": []
+    },
+    {
+        "id": "6707ae0c462f5ffb",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 21,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "3_3",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "3_3",
+        "x": 490,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "406ad5dcdf9ae4e0",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 23,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "3_4",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "3_4",
+        "x": 490,
+        "y": 1980,
+        "wires": []
+    },
+    {
+        "id": "936eba1d09241e61",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 25,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "4_1",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": false,
+        "name": "4_1",
+        "x": 490,
+        "y": 2020,
+        "wires": []
+    },
+    {
+        "id": "81a67fd07e0b1dc6",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 27,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "4_2",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "4_2",
+        "x": 490,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "94e4b752f983b5d0",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 29,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "4_3",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "4_3",
+        "x": 490,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "6c7957d0b2d98311",
+        "type": "ui_led",
+        "z": "822a2cca8c69b658",
+        "order": 31,
+        "group": "0965621923ec0ba3",
+        "width": "2",
+        "height": "1",
+        "label": "4_4",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#808080",
+                "value": "0",
+                "valueType": "str"
+            },
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "str"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "square",
+        "showGlow": true,
+        "name": "4_4",
+        "x": 490,
+        "y": 2140,
+        "wires": []
+    },
+    {
+        "id": "28fb5e05ae20334f",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "ccb216aeb3ac214d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "set all",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "SetAll",
+        "topicType": "str",
+        "x": 530,
+        "y": 40,
+        "wires": [
+            [
+                "623e39998a97e9bf",
+                "a7f3aa51064946aa",
+                "8aba7a6ea403dd86",
+                "62edb9fd0f83f192",
+                "6834e2abb816e5bc",
+                "f10def7dc75e28ce",
+                "205e2d9a8ede753f",
+                "a738b2d837e363ad",
+                "b304a32e87b671a1",
+                "cd3c12da5117fc6c",
+                "e0a85e308ad73bff",
+                "7d83f000f96eb223",
+                "132e64e272270653",
+                "deb9afa84cd48900",
+                "37b5ba1cf2811401",
+                "6783289d6995dcef",
+                "20f424aca3bed6dd"
+            ]
+        ]
+    },
+    {
+        "id": "6aac77aab559391f",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "1_2",
+        "group": "ccb216aeb3ac214d",
+        "order": 4,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "1_2",
+        "topicType": "str",
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "d6c482428c2361ba",
+                "8aba7a6ea403dd86"
+            ]
+        ]
+    },
+    {
+        "id": "d218fd86d6ebe3ab",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "1_1",
+        "group": "ccb216aeb3ac214d",
+        "order": 3,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "1_1",
+        "topicType": "str",
+        "x": 530,
+        "y": 120,
+        "wires": [
+            [
+                "d85955e261c1ecf1",
+                "a7f3aa51064946aa"
+            ]
+        ]
+    },
+    {
+        "id": "c6ce66d5669e5d32",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "1_4",
+        "group": "ccb216aeb3ac214d",
+        "order": 6,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "1_4",
+        "topicType": "str",
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "b87db0d5648498c7",
+                "6834e2abb816e5bc"
+            ]
+        ]
+    },
+    {
+        "id": "a5ec6d858e56ef06",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "1_3",
+        "group": "ccb216aeb3ac214d",
+        "order": 5,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "1_3",
+        "topicType": "str",
+        "x": 530,
+        "y": 280,
+        "wires": [
+            [
+                "8e1c0abdb57deb25",
+                "62edb9fd0f83f192"
+            ]
+        ]
+    },
+    {
+        "id": "33df0b4d8b13c190",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "2_2",
+        "group": "ccb216aeb3ac214d",
+        "order": 8,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "2_2",
+        "topicType": "str",
+        "x": 530,
+        "y": 520,
+        "wires": [
+            [
+                "accb1fb0a0e6f3cf",
+                "205e2d9a8ede753f"
+            ]
+        ]
+    },
+    {
+        "id": "4d47c0aa615f7015",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "2_1",
+        "group": "ccb216aeb3ac214d",
+        "order": 7,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "2_1",
+        "topicType": "str",
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "383061b0dfe46ce4",
+                "f10def7dc75e28ce"
+            ]
+        ]
+    },
+    {
+        "id": "9fd6e02840d6a572",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "2_4",
+        "group": "ccb216aeb3ac214d",
+        "order": 10,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "2_4",
+        "topicType": "str",
+        "x": 530,
+        "y": 680,
+        "wires": [
+            [
+                "c9d29f482a925219",
+                "b304a32e87b671a1"
+            ]
+        ]
+    },
+    {
+        "id": "0a0266aa0294115a",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "2_3",
+        "group": "ccb216aeb3ac214d",
+        "order": 9,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "2_3",
+        "topicType": "str",
+        "x": 530,
+        "y": 600,
+        "wires": [
+            [
+                "a538a4a847cd7e30",
+                "a738b2d837e363ad"
+            ]
+        ]
+    },
+    {
+        "id": "f39b6b71e862d08f",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "3_2",
+        "group": "ccb216aeb3ac214d",
+        "order": 12,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "3_2",
+        "topicType": "str",
+        "x": 530,
+        "y": 840,
+        "wires": [
+            [
+                "8c57d863e8a44876",
+                "e0a85e308ad73bff"
+            ]
+        ]
+    },
+    {
+        "id": "713b7cf58a81ebb3",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "3_1",
+        "group": "ccb216aeb3ac214d",
+        "order": 11,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "3_1",
+        "topicType": "str",
+        "x": 530,
+        "y": 760,
+        "wires": [
+            [
+                "835a0f62369cc329",
+                "cd3c12da5117fc6c"
+            ]
+        ]
+    },
+    {
+        "id": "26b1fba66d7209e1",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "3_4",
+        "group": "ccb216aeb3ac214d",
+        "order": 14,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "3_4",
+        "topicType": "str",
+        "x": 530,
+        "y": 1000,
+        "wires": [
+            [
+                "58efa8402aa35aac",
+                "132e64e272270653"
+            ]
+        ]
+    },
+    {
+        "id": "3fe1e14c91ab6fbe",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "3_3",
+        "group": "ccb216aeb3ac214d",
+        "order": 13,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "3_3",
+        "topicType": "str",
+        "x": 530,
+        "y": 920,
+        "wires": [
+            [
+                "f575ed2e0d8774f0",
+                "7d83f000f96eb223"
+            ]
+        ]
+    },
+    {
+        "id": "8f57eec2a762bedf",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "4_2",
+        "group": "ccb216aeb3ac214d",
+        "order": 16,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "4_2",
+        "topicType": "str",
+        "x": 530,
+        "y": 1160,
+        "wires": [
+            [
+                "a8caba8f7fdd42fe",
+                "37b5ba1cf2811401"
+            ]
+        ]
+    },
+    {
+        "id": "92d73b5f32734cbe",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "4_1",
+        "group": "ccb216aeb3ac214d",
+        "order": 15,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "4_1",
+        "topicType": "str",
+        "x": 530,
+        "y": 1080,
+        "wires": [
+            [
+                "cd0e5b04fcfe0970",
+                "deb9afa84cd48900"
+            ]
+        ]
+    },
+    {
+        "id": "cf23d7ecbf82e362",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "4_4",
+        "group": "ccb216aeb3ac214d",
+        "order": 18,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "4_4",
+        "topicType": "str",
+        "x": 530,
+        "y": 1320,
+        "wires": [
+            [
+                "90aec016556de8a5",
+                "20f424aca3bed6dd"
+            ]
+        ]
+    },
+    {
+        "id": "c90fde870e5ee2e4",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "4_3",
+        "group": "ccb216aeb3ac214d",
+        "order": 17,
+        "width": 4,
+        "height": 4,
+        "passthru": false,
+        "label": "{{msg.symbol}}",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.color}}",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "4_3",
+        "topicType": "str",
+        "x": 530,
+        "y": 1240,
+        "wires": [
+            [
+                "76ad7cf92c0b512d",
+                "6783289d6995dcef"
+            ]
+        ]
+    },
+    {
+        "id": "c476543dd55b862b",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "ccb216aeb3ac214d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "turn off all",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "Black",
+        "icon": "",
+        "payload": "mqtt_payload",
+        "payloadType": "flow",
+        "topic": "TurnOff",
+        "topicType": "msg",
+        "x": 400,
+        "y": 1400,
+        "wires": [
+            [
+                "4efd2d1dae6b3fcd",
+                "c00a0d4ea4964aa0"
+            ]
+        ]
+    },
+    {
+        "id": "d85955e261c1ecf1",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "d218fd86d6ebe3ab"
+            ]
+        ]
+    },
+    {
+        "id": "d6c482428c2361ba",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "6aac77aab559391f"
+            ]
+        ]
+    },
+    {
+        "id": "8e1c0abdb57deb25",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "a5ec6d858e56ef06"
+            ]
+        ]
+    },
+    {
+        "id": "b87db0d5648498c7",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 360,
+        "wires": [
+            [
+                "c6ce66d5669e5d32"
+            ]
+        ]
+    },
+    {
+        "id": "383061b0dfe46ce4",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 440,
+        "wires": [
+            [
+                "4d47c0aa615f7015"
+            ]
+        ]
+    },
+    {
+        "id": "accb1fb0a0e6f3cf",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 520,
+        "wires": [
+            [
+                "33df0b4d8b13c190"
+            ]
+        ]
+    },
+    {
+        "id": "a538a4a847cd7e30",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 600,
+        "wires": [
+            [
+                "0a0266aa0294115a"
+            ]
+        ]
+    },
+    {
+        "id": "c9d29f482a925219",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 680,
+        "wires": [
+            [
+                "9fd6e02840d6a572"
+            ]
+        ]
+    },
+    {
+        "id": "835a0f62369cc329",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 760,
+        "wires": [
+            [
+                "713b7cf58a81ebb3"
+            ]
+        ]
+    },
+    {
+        "id": "8c57d863e8a44876",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 840,
+        "wires": [
+            [
+                "f39b6b71e862d08f"
+            ]
+        ]
+    },
+    {
+        "id": "f575ed2e0d8774f0",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 920,
+        "wires": [
+            [
+                "3fe1e14c91ab6fbe"
+            ]
+        ]
+    },
+    {
+        "id": "58efa8402aa35aac",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1000,
+        "wires": [
+            [
+                "26b1fba66d7209e1"
+            ]
+        ]
+    },
+    {
+        "id": "cd0e5b04fcfe0970",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1080,
+        "wires": [
+            [
+                "92d73b5f32734cbe"
+            ]
+        ]
+    },
+    {
+        "id": "a8caba8f7fdd42fe",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1160,
+        "wires": [
+            [
+                "8f57eec2a762bedf"
+            ]
+        ]
+    },
+    {
+        "id": "76ad7cf92c0b512d",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1240,
+        "wires": [
+            [
+                "c90fde870e5ee2e4"
+            ]
+        ]
+    },
+    {
+        "id": "90aec016556de8a5",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 1320,
+        "wires": [
+            [
+                "cf23d7ecbf82e362"
+            ]
+        ]
+    },
+    {
+        "id": "623e39998a97e9bf",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "current_color",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": "current_symbol",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 140,
+        "y": 40,
+        "wires": [
+            [
+                "d218fd86d6ebe3ab",
+                "6aac77aab559391f",
+                "a5ec6d858e56ef06",
+                "c6ce66d5669e5d32",
+                "4d47c0aa615f7015",
+                "33df0b4d8b13c190",
+                "0a0266aa0294115a",
+                "9fd6e02840d6a572",
+                "713b7cf58a81ebb3",
+                "f39b6b71e862d08f",
+                "3fe1e14c91ab6fbe",
+                "26b1fba66d7209e1",
+                "92d73b5f32734cbe",
+                "8f57eec2a762bedf",
+                "c90fde870e5ee2e4",
+                "cf23d7ecbf82e362",
+                "28fb5e05ae20334f"
+            ]
+        ]
+    },
+    {
+        "id": "4efd2d1dae6b3fcd",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "set_turn_off",
+        "rules": [
+            {
+                "t": "set",
+                "p": "color",
+                "pt": "msg",
+                "to": "rgb(0, 0, 0)",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "symbol",
+                "pt": "msg",
+                "to": " ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 150,
+        "y": 1400,
+        "wires": [
+            [
+                "d218fd86d6ebe3ab",
+                "6aac77aab559391f",
+                "a5ec6d858e56ef06",
+                "c6ce66d5669e5d32",
+                "4d47c0aa615f7015",
+                "33df0b4d8b13c190",
+                "0a0266aa0294115a",
+                "9fd6e02840d6a572",
+                "713b7cf58a81ebb3",
+                "f39b6b71e862d08f",
+                "3fe1e14c91ab6fbe",
+                "26b1fba66d7209e1",
+                "92d73b5f32734cbe",
+                "c90fde870e5ee2e4",
+                "cf23d7ecbf82e362",
+                "8f57eec2a762bedf"
+            ]
+        ]
+    },
+    {
+        "id": "d3dd77ac8669aeef",
+        "type": "inject",
+        "z": "822a2cca8c69b658",
+        "name": "start_off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 130,
+        "y": 1460,
+        "wires": [
+            [
+                "c476543dd55b862b"
+            ]
+        ]
+    },
+    {
+        "id": "a7f3aa51064946aa",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/1_1/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8aba7a6ea403dd86",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/1_2/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "62edb9fd0f83f192",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/1_3/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "6834e2abb816e5bc",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/1_4/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f10def7dc75e28ce",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/2_1/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "205e2d9a8ede753f",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/2_2/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "a738b2d837e363ad",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/2_3/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b304a32e87b671a1",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/2_4/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "cd3c12da5117fc6c",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/3_1/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "e0a85e308ad73bff",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/3_2/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7d83f000f96eb223",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/3_3/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "132e64e272270653",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/3_4/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "deb9afa84cd48900",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/4_1/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 1160,
+        "wires": []
+    },
+    {
+        "id": "37b5ba1cf2811401",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/4_2/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 1240,
+        "wires": []
+    },
+    {
+        "id": "20f424aca3bed6dd",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/4_4/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 1400,
+        "wires": []
+    },
+    {
+        "id": "6783289d6995dcef",
+        "type": "mqtt out",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "topic": "SwimmingPixel/Lightshow/4_3/Control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "549a8d8c.df33f4",
+        "x": 1030,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "350a02cbc63d12aa",
+        "type": "ui_text",
+        "z": "822a2cca8c69b658",
+        "group": "6e08d2278525bcb2",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Selected Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1440,
+        "y": 2220,
+        "wires": []
+    },
+    {
+        "id": "1f21a6471157d039",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "6e08d2278525bcb2",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Single Color",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "icon": "",
+        "payload": "Single Color",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1070,
+        "y": 1620,
+        "wires": [
+            [
+                "350a02cbc63d12aa",
+                "b4d3e9254492e572",
+                "4e0c1232e34dd13e",
+                "e58394d07adb92bc",
+                "f94e5d01d50073c4"
+            ]
+        ]
+    },
+    {
+        "id": "b66624685fcb826a",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "6e08d2278525bcb2",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Theather Chase",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "icon": "",
+        "payload": "Theather Chase",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1060,
+        "y": 1700,
+        "wires": [
+            [
+                "350a02cbc63d12aa",
+                "3d7116f8a91e89d7",
+                "4e0c1232e34dd13e",
+                "07ce511fd5dad3a9",
+                "f94e5d01d50073c4"
+            ]
+        ]
+    },
+    {
+        "id": "a3b5a5d784664e13",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "6e08d2278525bcb2",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Gradient Color",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "icon": "",
+        "payload": "Gradient Color",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1060,
+        "y": 1780,
+        "wires": [
+            [
+                "350a02cbc63d12aa",
+                "9714a040ddd9260c",
+                "4e0c1232e34dd13e",
+                "861721a378651bfd",
+                "f94e5d01d50073c4"
+            ]
+        ]
+    },
+    {
+        "id": "e1cfe3d69fbcc849",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "6e08d2278525bcb2",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Rainbow Colorfull",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "icon": "",
+        "payload": "Gradient Color",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1050,
+        "y": 1860,
+        "wires": [
+            [
+                "350a02cbc63d12aa",
+                "096128d22b7f947f",
+                "4e0c1232e34dd13e",
+                "5eefaadf9fd22e23",
+                "f94e5d01d50073c4"
+            ]
+        ]
+    },
+    {
+        "id": "0bb4c390eb8622e5",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "6e08d2278525bcb2",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Meteor",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "icon": "",
+        "payload": "Meteor",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1080,
+        "y": 2020,
+        "wires": [
+            [
+                "350a02cbc63d12aa",
+                "312b038ae1e840ce",
+                "4e0c1232e34dd13e",
+                "3f2cfb604f5aa710",
+                "f94e5d01d50073c4"
+            ]
+        ]
+    },
+    {
+        "id": "3b4af73219d5af62",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "6e08d2278525bcb2",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Rainbow Generic",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "icon": "",
+        "payload": "Gradient Generic",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1050,
+        "y": 1940,
+        "wires": [
+            [
+                "350a02cbc63d12aa",
+                "8dda98b814598540",
+                "4e0c1232e34dd13e",
+                "9e8dba592dcb0271",
+                "f94e5d01d50073c4"
+            ]
+        ]
+    },
+    {
+        "id": "e7dd4818b921bc90",
+        "type": "ui_button",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "group": "6e08d2278525bcb2",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Mozart",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "{{msg.payload}}",
+        "icon": "",
+        "payload": "Mozart",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1090,
+        "y": 2120,
+        "wires": [
+            [
+                "350a02cbc63d12aa",
+                "9dc500e4e52f9aa2",
+                "4e0c1232e34dd13e",
+                "af2b04e8efc19e19",
+                "f94e5d01d50073c4"
+            ]
+        ]
+    },
+    {
+        "id": "b4d3e9254492e572",
+        "type": "subflow:428b5af189e091d7",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "env": [
+            {
+                "name": "color",
+                "value": "{{msg.payload}}",
+                "type": "env"
+            }
+        ],
+        "x": 740,
+        "y": 1620,
+        "wires": [
+            [
+                "1f21a6471157d039"
+            ],
+            [
+                "b66624685fcb826a",
+                "a3b5a5d784664e13",
+                "e1cfe3d69fbcc849",
+                "3b4af73219d5af62",
+                "0bb4c390eb8622e5",
+                "e7dd4818b921bc90"
+            ]
+        ]
+    },
+    {
+        "id": "3d7116f8a91e89d7",
+        "type": "subflow:428b5af189e091d7",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "env": [
+            {
+                "name": "color",
+                "value": "{{msg.payload}}",
+                "type": "str"
+            }
+        ],
+        "x": 720,
+        "y": 1700,
+        "wires": [
+            [
+                "b66624685fcb826a"
+            ],
+            [
+                "1f21a6471157d039",
+                "a3b5a5d784664e13",
+                "e1cfe3d69fbcc849",
+                "3b4af73219d5af62",
+                "0bb4c390eb8622e5",
+                "e7dd4818b921bc90"
+            ]
+        ]
+    },
+    {
+        "id": "9714a040ddd9260c",
+        "type": "subflow:428b5af189e091d7",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "env": [
+            {
+                "name": "color",
+                "value": "{{msg.payload}}",
+                "type": "str"
+            }
+        ],
+        "x": 740,
+        "y": 1780,
+        "wires": [
+            [
+                "a3b5a5d784664e13"
+            ],
+            [
+                "b66624685fcb826a",
+                "1f21a6471157d039",
+                "e1cfe3d69fbcc849",
+                "3b4af73219d5af62",
+                "0bb4c390eb8622e5",
+                "e7dd4818b921bc90"
+            ]
+        ]
+    },
+    {
+        "id": "096128d22b7f947f",
+        "type": "subflow:428b5af189e091d7",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "env": [],
+        "x": 740,
+        "y": 1860,
+        "wires": [
+            [
+                "e1cfe3d69fbcc849"
+            ],
+            [
+                "1f21a6471157d039",
+                "b66624685fcb826a",
+                "a3b5a5d784664e13",
+                "3b4af73219d5af62",
+                "0bb4c390eb8622e5",
+                "e7dd4818b921bc90"
+            ]
+        ]
+    },
+    {
+        "id": "8dda98b814598540",
+        "type": "subflow:428b5af189e091d7",
+        "z": "822a2cca8c69b658",
+        "x": 720,
+        "y": 1940,
+        "wires": [
+            [
+                "3b4af73219d5af62"
+            ],
+            [
+                "1f21a6471157d039",
+                "b66624685fcb826a",
+                "a3b5a5d784664e13",
+                "e1cfe3d69fbcc849",
+                "0bb4c390eb8622e5",
+                "e7dd4818b921bc90"
+            ]
+        ]
+    },
+    {
+        "id": "312b038ae1e840ce",
+        "type": "subflow:428b5af189e091d7",
+        "z": "822a2cca8c69b658",
+        "x": 740,
+        "y": 2020,
+        "wires": [
+            [
+                "0bb4c390eb8622e5"
+            ],
+            [
+                "e7dd4818b921bc90",
+                "3b4af73219d5af62",
+                "e1cfe3d69fbcc849",
+                "a3b5a5d784664e13",
+                "b66624685fcb826a",
+                "1f21a6471157d039"
+            ]
+        ]
+    },
+    {
+        "id": "9dc500e4e52f9aa2",
+        "type": "subflow:428b5af189e091d7",
+        "z": "822a2cca8c69b658",
+        "x": 740,
+        "y": 2120,
+        "wires": [
+            [
+                "e7dd4818b921bc90"
+            ],
+            [
+                "0bb4c390eb8622e5",
+                "3b4af73219d5af62",
+                "e1cfe3d69fbcc849",
+                "a3b5a5d784664e13",
+                "b66624685fcb826a",
+                "1f21a6471157d039"
+            ]
+        ]
+    },
+    {
+        "id": "4e0c1232e34dd13e",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "mode",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1440,
+        "y": 1680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c312a695d9452d1",
+        "type": "inject",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 760,
+        "y": 1560,
+        "wires": [
+            [
+                "1f21a6471157d039"
+            ]
+        ]
+    },
+    {
+        "id": "e58394d07adb92bc",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_symbol",
+                "pt": "flow",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 1740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "07ce511fd5dad3a9",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_symbol",
+                "pt": "flow",
+                "to": "TC",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "861721a378651bfd",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_symbol",
+                "pt": "flow",
+                "to": "GC",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 1860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5eefaadf9fd22e23",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_symbol",
+                "pt": "flow",
+                "to": "RC",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 1920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9e8dba592dcb0271",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_symbol",
+                "pt": "flow",
+                "to": "RG",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 1980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "af2b04e8efc19e19",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_symbol",
+                "pt": "flow",
+                "to": "MZ",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 2100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f2cfb604f5aa710",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_symbol",
+                "pt": "flow",
+                "to": "MT",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1470,
+        "y": 2040,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "76959304840f0986",
+        "type": "ui_colour_picker",
+        "z": "822a2cca8c69b658",
+        "name": "Pick Color",
+        "label": "Pick Color!",
+        "group": "6e08d2278525bcb2",
+        "format": "rgb",
+        "outformat": "string",
+        "showSwatch": true,
+        "showPicker": true,
+        "showValue": true,
+        "showHue": false,
+        "showAlpha": false,
+        "showLightness": true,
+        "square": "false",
+        "dynOutput": "false",
+        "order": 1,
+        "width": "4",
+        "height": "4",
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 1070,
+        "y": 2220,
+        "wires": [
+            [
+                "8d442f5861e3d3e8",
+                "f94e5d01d50073c4"
+            ]
+        ]
+    },
+    {
+        "id": "8d442f5861e3d3e8",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "current_color",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1460,
+        "y": 2160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f94e5d01d50073c4",
+        "type": "function",
+        "z": "822a2cca8c69b658",
+        "name": "set_up_mqqt_payload",
+        "func": "var str_rgb = flow.get(\"current_color\");\n\nstr_rgb = str_rgb.replace(\"rgb(\",\"\");\nstr_rgb = str_rgb.replace(\")\",\"\");\nstr_rgb = str_rgb.split(\",\");\nvar mode = flow.get(\"mode\");\nvar payload = {\"r\": parseInt(str_rgb[0]), \"g\": parseInt(str_rgb[1]), \"b\": parseInt(str_rgb[2]), \"mode\": mode};\nflow.set(\"mqtt_payload\", payload)\nmsg.payload = payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 1620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c00a0d4ea4964aa0",
+        "type": "change",
+        "z": "822a2cca8c69b658",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"r\":0,\"g\":0,\"b\":0,\"mode\":\"LightOff\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 620,
+        "y": 1400,
+        "wires": [
+            [
+                "a7f3aa51064946aa",
+                "8aba7a6ea403dd86",
+                "62edb9fd0f83f192",
+                "6834e2abb816e5bc",
+                "f10def7dc75e28ce",
+                "205e2d9a8ede753f",
+                "a738b2d837e363ad",
+                "b304a32e87b671a1",
+                "cd3c12da5117fc6c",
+                "e0a85e308ad73bff",
+                "7d83f000f96eb223",
+                "132e64e272270653",
+                "deb9afa84cd48900",
+                "37b5ba1cf2811401",
+                "6783289d6995dcef",
+                "20f424aca3bed6dd"
+            ]
+        ]
+    },
+    {
+        "id": "0965621923ec0ba3",
+        "type": "ui_group",
+        "name": "Activation",
+        "tab": "3d06c619edabf33e",
+        "order": 3,
+        "disp": true,
+        "width": "2",
+        "collapse": false
+    },
+    {
+        "id": "549a8d8c.df33f4",
+        "type": "mqtt-broker",
+        "name": "MQTT",
+        "broker": "test.mosquitto.org",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ccb216aeb3ac214d",
+        "type": "ui_group",
+        "name": "Panel",
+        "tab": "3d06c619edabf33e",
+        "order": 2,
+        "disp": true,
+        "width": "16",
+        "collapse": false
+    },
+    {
+        "id": "6e08d2278525bcb2",
+        "type": "ui_group",
+        "name": "Setup",
+        "tab": "3d06c619edabf33e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "3d06c619edabf33e",
+        "type": "ui_tab",
+        "name": "Illumination",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
