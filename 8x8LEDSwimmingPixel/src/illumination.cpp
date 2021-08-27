@@ -1,63 +1,59 @@
 #include "illumination.h"
 
-void turnOffLight() 
+void turn_off_led() 
 {
-    // EVERY_N_MILLISECONDS(500){
+    EVERY_N_MILLISECONDS(50){
         matrix.clear();
         matrix.show();
-    // }
+    }
     
 }
 
-void tapSingleColor(JsonDocument& doc) 
+void single_color() 
 {
-    if (doc.containsKey("color")){
-        JsonArray color = doc["color"];
-        int r = color[0]; 
-        int g = color[1];
-        int b = color[2];
-        matrix.fillScreen(matrix.Color(r, g, b));
-    }
-    if(doc.containsKey("brightness")){
-        matrix.setBrightness((int)doc["brightness"]);
-    }
     EVERY_N_MILLISECONDS(100){
+        matrix.fillScreen(matrix.Color(L_Color.red,L_Color.green,L_Color.blue));
         matrix.show();
     }
 }
 
-void DimBright() 
+void dim_bright() 
 {
-    // dimm
-    #define LED_COUNT 64
-    for(int i=0; i<LED_COUNT; i++)
-    {
-        ledArray[i] = CRGB(243,12,204);
-        // matrix.setPixelColor(i, matrix.Color(243,12,204));
-        matrix.setBrightness(250);
+    static int br = 0;
+    static int steady_ctr = 0;
+    enum rampDir{ rampUp, rampDown, steady_on, steady_off};
+    static int light_dir = rampUp;  
+    EVERY_N_MILLISECONDS(100){
+        matrix.fillScreen(matrix.Color(L_Color.red,L_Color.green,L_Color.blue));
         matrix.show();
-    }
-
-    for(int k=250; k>0; k--)
-    {
-        matrix.setBrightness(k);
-        matrix.show();
-        delay(6.9);
-    }
-
-    for(int i=0; i<LED_COUNT; i++)
-    {
-        ledArray[i] = CRGB(243,12,204);
-        // matrix.setPixelColor(i, matrix.Color(243,12,204));
-        matrix.setBrightness(1);
-        matrix.show();
-    }
-
-    for(int j=1; j<250; j++)
-    {
-        matrix.setBrightness(j);
-        matrix.show();
-        delay(6.8);
+        switch (light_dir)
+        {
+        case rampUp:
+            br++;
+            if (br >= 50) light_dir = steady_on;
+            break;
+        case rampDown:
+            br--;
+            if (br <= 0) light_dir = steady_off;
+            break;
+        case steady_on:
+            steady_ctr++;
+            if (steady_ctr >= 10){ 
+                light_dir = rampDown;
+                steady_ctr = 0;
+            }
+            break;
+        case steady_off:
+            br = 0;
+            steady_ctr++;
+            if (steady_ctr >= 10){ 
+                light_dir = rampUp;
+                steady_ctr = 0;
+            }
+        default:
+            break;
+        }
+        matrix.setBrightness(br);
     }
 }
 
@@ -108,35 +104,31 @@ void calculateHSV(const byte& r, const byte& g, const byte& b, uint32_t& h, uint
 }
 
 
-void TheatherChase() 
+void theather_chase() 
 {
     // theater chase
 	static byte steps = 0;
-	static long last = millis();
-	if (millis() - last >= 75)
-	{
-		matrix.clear();
+    EVERY_N_MILLISECONDS(75){
+        matrix.clear();
 		for (byte c = steps; c < 64; c += 3)
 		{
-			ledArray[c] = CRGB(255, 0, 200);
+			ledArray[c] = CRGB(L_Color.red,L_Color.green,L_Color.blue);
 		}
 		steps++;
 		if (steps >= 3) { steps = 0; }
 		matrix.show();
-		last = millis();
-	}
+    }
 }
 
-void GradientColor() 
+void gradient_color() 
 {
     // Gradient Color
 	uint32_t hue;
 	uint8_t saturation, value;
 	static int32_t steps = 0;
 	static bool dir = false;
-	static long last = millis();
-	calculateHSV(255, 0, 200, hue, saturation, value);
-	if (millis() - last >= 20)
+	calculateHSV(L_Color.red,L_Color.green,L_Color.blue, hue, saturation, value);
+	EVERY_N_MILLISECONDS(20)
 	{
 		for (int i = -32; i < NUM_LEDS - 32; i++)
 		{
@@ -154,7 +146,6 @@ void GradientColor()
 			steps--;
 			if (steps <= -1*32){dir = !dir;}
 		}
-		last = millis();
 	} 
 }
 
@@ -164,148 +155,6 @@ void setPixel(int r, int g, int b){
     matrix.show();
 }
 
-
-void mozart(){
-    clock_t start;
-    double D = 0;
-    start=clock();
-    while(D<30.7)
-    {
-        GradientColor();
-        D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    delay(2200);
-    setPixel(255, 0, 0);
-    delay(2000);
-    while(D<65.7)
-    {
-        GradientColor();
-        D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    delay(2300);
-    setPixel(255, 0, 0);
-    delay(2000);
-    while(D<82.5)
-    {
-        GradientColor();
-        D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    delay(2200);
-    setPixel(255, 0, 0);
-    delay(2000);
-    while(D<135)
-    {
-    GradientColor();
-    D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    while(D<143.5)
-    {
-    DimBright();
-    D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    delay(1000);
-    while(D<153)
-    {
-    GradientColor();
-    D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    delay(100);
-    while(D<161)
-    {
-    DimBright();
-    D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    delay(250);
-    while(D<169.5)
-    {
-    GradientColor();
-    D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    delay(2000);
-    while(D<198)                                             
-    {
-    for(int i=0;i<3;i++)                                    // Dreimal  Roter Wellenfront links<->rechts
-    {
-        if(D>=198) {break;}
-        setPixel(255, 0, 0);
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    for(int j=0;j<3;j++)                                      // Dreimal Blauer Wellenfront unten <-> oben
-    {
-        if(D>=198)
-            break;
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        setPixel(0, 0, 255);
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        D=(clock()-start)/(double)CLOCKS_PER_SEC;
-
-    }
-    for(int j=0;j<3;j++)                                      // Dreimal Grüner Wellenfront links <-> rechts
-    {
-        if(D>=198)
-        {break;}
-        setPixel(0, 255, 0);
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-    for(int j=0;j<3;j++)                                      // Dreimal Gelber Wellenfront unten <-> oben
-    {
-        if(D>=198) {break;}
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        setPixel(255,255,0);
-        delay(100);
-        turnOffLight();
-        delay(100);
-        turnOffLight();
-        delay(100);
-        D=(clock()-start)/(double)CLOCKS_PER_SEC;
-    }
-
-    }
-    for(int i=0; i<LED_COUNT; i++) 
-    { 
-        ledArray[i] = CRGB(250,250,250);
-        // strip.setPixelColor(i, strip.Color(250,250,250));         //  Set pixel's color (in RAM)
-        matrix.show();
-    }
-    delay(2000);
-    turnOffLight();
-}
 
 uint16_t XY(uint8_t x, uint8_t y)
 {
@@ -353,7 +202,7 @@ void rainbow_colorfull()
     matrix.show();
 }
 
-void meteor()
+void shooting_star()
 {
     static long last = millis();
     static uint8_t hue;
@@ -374,7 +223,7 @@ void meteor()
 }
 
 // Light Show 3rd Pattern: Colorfull and circeling in each pixel
-void GenericRainbow()
+void rainbow_generic()
 {
     EVERY_N_MILLIS(8) {
         // draw a generic, no-name rainbow
@@ -399,4 +248,147 @@ void GenericRainbow()
         }
         matrix.show();
     }
+}
+
+void mozart(){
+    byte LED_COUNT = 64;
+    clock_t start;
+    double D = 0;
+    start=clock();
+    while(D<30.7)
+    {
+        gradient_color();
+        D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    delay(2200);
+    setPixel(255, 0, 0);
+    delay(2000);
+    while(D<65.7)
+    {
+        gradient_color();
+        D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    delay(2300);
+    setPixel(255, 0, 0);
+    delay(2000);
+    while(D<82.5)
+    {
+        gradient_color();
+        D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    delay(2200);
+    setPixel(255, 0, 0);
+    delay(2000);
+    while(D<135)
+    {
+    gradient_color();
+    D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    while(D<143.5)
+    {
+    dim_bright();
+    D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    delay(1000);
+    while(D<153)
+    {
+    gradient_color();
+    D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    delay(100);
+    while(D<161)
+    {
+    dim_bright();
+    D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    delay(250);
+    while(D<169.5)
+    {
+    gradient_color();
+    D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    delay(2000);
+    while(D<198)                                             
+    {
+    for(int i=0;i<3;i++)                                    // Dreimal  Roter Wellenfront links<->rechts
+    {
+        if(D>=198) {break;}
+        setPixel(255, 0, 0);
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    for(int j=0;j<3;j++)                                      // Dreimal Blauer Wellenfront unten <-> oben
+    {
+        if(D>=198)
+            break;
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        setPixel(0, 0, 255);
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        D=(clock()-start)/(double)CLOCKS_PER_SEC;
+
+    }
+    for(int j=0;j<3;j++)                                      // Dreimal Grüner Wellenfront links <-> rechts
+    {
+        if(D>=198)
+        {break;}
+        setPixel(0, 255, 0);
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+    for(int j=0;j<3;j++)                                      // Dreimal Gelber Wellenfront unten <-> oben
+    {
+        if(D>=198) {break;}
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        setPixel(255,255,0);
+        delay(100);
+        turn_off_led();
+        delay(100);
+        turn_off_led();
+        delay(100);
+        D=(clock()-start)/(double)CLOCKS_PER_SEC;
+    }
+
+    }
+    for(int i=0; i<LED_COUNT; i++) 
+    { 
+        ledArray[i] = CRGB(250,250,250);
+        // strip.setPixelColor(i, strip.Color(250,250,250));         //  Set pixel's color (in RAM)
+        matrix.show();
+    }
+    delay(2000);
+    turn_off_led();
 }

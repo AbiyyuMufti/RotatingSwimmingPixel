@@ -174,7 +174,8 @@
         "y": 100,
         "wires": [
             [
-                "8bdfe9cdc3fc2dd4"
+                "8bdfe9cdc3fc2dd4",
+                "b04a8bc878626fed"
             ]
         ],
         "outputLabels": [
@@ -205,7 +206,8 @@
         "y": 140,
         "wires": [
             [
-                "8bdfe9cdc3fc2dd4"
+                "8bdfe9cdc3fc2dd4",
+                "b04a8bc878626fed"
             ]
         ],
         "outputLabels": [
@@ -235,7 +237,8 @@
         "y": 180,
         "wires": [
             [
-                "8bdfe9cdc3fc2dd4"
+                "8bdfe9cdc3fc2dd4",
+                "b04a8bc878626fed"
             ]
         ],
         "outputLabels": [
@@ -265,7 +268,8 @@
         "y": 220,
         "wires": [
             [
-                "8bdfe9cdc3fc2dd4"
+                "8bdfe9cdc3fc2dd4",
+                "b04a8bc878626fed"
             ]
         ],
         "outputLabels": [
@@ -279,8 +283,8 @@
         "name": "STOP_BT",
         "group": "1f0559d3a395dc0a",
         "order": 13,
-        "width": "3",
-        "height": "1",
+        "width": "0",
+        "height": "0",
         "passthru": true,
         "label": "STOP",
         "tooltip": "",
@@ -295,7 +299,8 @@
         "y": 260,
         "wires": [
             [
-                "8bdfe9cdc3fc2dd4"
+                "8bdfe9cdc3fc2dd4",
+                "b04a8bc878626fed"
             ]
         ],
         "outputLabels": [
@@ -324,7 +329,8 @@
         "y": 40,
         "wires": [
             [
-                "aac948e45958c212"
+                "aac948e45958c212",
+                "b04a8bc878626fed"
             ]
         ]
     },
@@ -402,7 +408,7 @@
         "id": "beb4b19190d4aa3a",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "1_1/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/1_1/Control",
         "qos": "0",
         "retain": "false",
@@ -412,7 +418,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 60,
         "wires": []
     },
@@ -438,9 +444,7 @@
         "x": 800,
         "y": 120,
         "wires": [
-            [
-                "b04a8bc878626fed"
-            ]
+            []
         ]
     },
     {
@@ -465,9 +469,7 @@
         "x": 800,
         "y": 240,
         "wires": [
-            [
-                "b04a8bc878626fed"
-            ]
+            []
         ]
     },
     {
@@ -699,7 +701,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 400,
         "wires": [
             [
@@ -732,7 +734,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 480,
         "wires": [
             [
@@ -765,7 +767,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 560,
         "wires": [
             [
@@ -798,7 +800,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 640,
         "wires": [
             [
@@ -1216,7 +1218,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 720,
         "wires": [
             [
@@ -1249,7 +1251,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 800,
         "wires": [
             [
@@ -1282,7 +1284,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 880,
         "wires": [
             [
@@ -1315,7 +1317,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 960,
         "wires": [
             [
@@ -1552,7 +1554,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 1040,
         "wires": [
             [
@@ -1585,7 +1587,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 1120,
         "wires": [
             [
@@ -1618,7 +1620,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 1200,
         "wires": [
             [
@@ -1651,7 +1653,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 1280,
         "wires": [
             [
@@ -1888,7 +1890,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 1360,
         "wires": [
             [
@@ -1921,7 +1923,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 1440,
         "wires": [
             [
@@ -1954,7 +1956,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 1520,
         "wires": [
             [
@@ -1987,7 +1989,7 @@
         "officon": "",
         "offcolor": "",
         "animate": false,
-        "x": 630,
+        "x": 770,
         "y": 1600,
         "wires": [
             [
@@ -2007,7 +2009,7 @@
         ],
         "repeat": "",
         "crontab": "",
-        "once": true,
+        "once": false,
         "onceDelay": 0.1,
         "topic": "",
         "payload": "0",
@@ -2040,7 +2042,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 400,
         "wires": [
             []
@@ -2050,7 +2052,7 @@
         "id": "5a0b7122ceae0fe6",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "1_2/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/1_2/Control",
         "qos": "0",
         "retain": "false",
@@ -2060,7 +2062,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 100,
         "wires": []
     },
@@ -2068,7 +2070,7 @@
         "id": "3cc94ba04f9f338b",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "1_3/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/1_3/Control",
         "qos": "0",
         "retain": "false",
@@ -2078,7 +2080,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 140,
         "wires": []
     },
@@ -2086,7 +2088,7 @@
         "id": "d6b71952f4280a4a",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "1_4/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/1_4/Control",
         "qos": "0",
         "retain": "false",
@@ -2096,7 +2098,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 180,
         "wires": []
     },
@@ -2183,7 +2185,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 480,
         "wires": [
             []
@@ -2208,7 +2210,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 560,
         "wires": [
             []
@@ -2233,7 +2235,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 640,
         "wires": [
             []
@@ -2258,7 +2260,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 720,
         "wires": [
             []
@@ -2283,7 +2285,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 800,
         "wires": [
             []
@@ -2308,7 +2310,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 880,
         "wires": [
             []
@@ -2333,7 +2335,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 960,
         "wires": [
             []
@@ -2358,7 +2360,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 1040,
         "wires": [
             []
@@ -2383,7 +2385,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
+        "x": 960,
         "y": 1120,
         "wires": [
             []
@@ -2408,7 +2410,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 970,
         "y": 1200,
         "wires": [
             []
@@ -2433,7 +2435,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 970,
         "y": 1280,
         "wires": [
             []
@@ -2458,7 +2460,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 970,
         "y": 1360,
         "wires": [
             []
@@ -2483,7 +2485,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 970,
         "y": 1440,
         "wires": [
             []
@@ -2508,7 +2510,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 970,
         "y": 1520,
         "wires": [
             []
@@ -2533,7 +2535,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 830,
+        "x": 970,
         "y": 1600,
         "wires": [
             []
@@ -2543,7 +2545,7 @@
         "id": "944a4b7f9a41b954",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "2_1/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/2_1/Control",
         "qos": "0",
         "retain": "false",
@@ -2553,7 +2555,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 220,
         "wires": []
     },
@@ -2561,7 +2563,7 @@
         "id": "19756448c36fda9c",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "2_2/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/2_2/Control",
         "qos": "0",
         "retain": "false",
@@ -2571,7 +2573,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 260,
         "wires": []
     },
@@ -2579,7 +2581,7 @@
         "id": "86d799a306ec24e5",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "2_3/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/2_3/Control",
         "qos": "0",
         "retain": "false",
@@ -2589,7 +2591,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 300,
         "wires": []
     },
@@ -2597,7 +2599,7 @@
         "id": "e3673980c992928b",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "2_4/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/2_4/Control",
         "qos": "0",
         "retain": "false",
@@ -2607,7 +2609,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 340,
         "wires": []
     },
@@ -2615,7 +2617,7 @@
         "id": "106414ec58174692",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "3_1/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/3_1/Control",
         "qos": "0",
         "retain": "false",
@@ -2625,7 +2627,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 380,
         "wires": []
     },
@@ -2633,7 +2635,7 @@
         "id": "17f7303ba1bf97fb",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "3_2/Control",
+        "name": "",
         "topic": "SwimmingPixel/Motion/3_2/Control",
         "qos": "0",
         "retain": "false",
@@ -2643,7 +2645,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 420,
         "wires": []
     },
@@ -2651,8 +2653,8 @@
         "id": "b3d2f06859e86150",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "3_3/Control",
-        "topic": "SwimmingPixel/Motion/1_3/Control",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/3_3/Control",
         "qos": "0",
         "retain": "false",
         "respTopic": "",
@@ -2661,7 +2663,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 460,
         "wires": []
     },
@@ -2669,8 +2671,8 @@
         "id": "43402bbf9033d478",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "3_4/Control",
-        "topic": "SwimmingPixel/Motion/1_4/Control",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/3_4/Control",
         "qos": "0",
         "retain": "false",
         "respTopic": "",
@@ -2679,7 +2681,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 500,
         "wires": []
     },
@@ -2687,8 +2689,8 @@
         "id": "7157eae0a43e0e07",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "3_1/Control",
-        "topic": "SwimmingPixel/Motion/2_1/Control",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/4_1/Control",
         "qos": "0",
         "retain": "false",
         "respTopic": "",
@@ -2697,7 +2699,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 540,
         "wires": []
     },
@@ -2705,8 +2707,8 @@
         "id": "17d72ae34bfcc461",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "3_2/Control",
-        "topic": "SwimmingPixel/Motion/2_2/Control",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/4_2/Control",
         "qos": "0",
         "retain": "false",
         "respTopic": "",
@@ -2715,7 +2717,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 580,
         "wires": []
     },
@@ -2723,8 +2725,8 @@
         "id": "549c27f7343af240",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "3_3/Control",
-        "topic": "SwimmingPixel/Motion/2_3/Control",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/4_3/Control",
         "qos": "0",
         "retain": "false",
         "respTopic": "",
@@ -2733,7 +2735,7 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 620,
         "wires": []
     },
@@ -2741,8 +2743,8 @@
         "id": "0bcb4136454e1c66",
         "type": "mqtt out",
         "z": "e0b5470536da3afb",
-        "name": "3_4/Control",
-        "topic": "SwimmingPixel/Motion/2_4/Control",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/4_4/Control",
         "qos": "0",
         "retain": "false",
         "respTopic": "",
@@ -2751,9 +2753,49 @@
         "correl": "",
         "expiry": "",
         "broker": "549a8d8c.df33f4",
-        "x": 1330,
+        "x": 1400,
         "y": 660,
         "wires": []
+    },
+    {
+        "id": "d0f4da4307ad96ba",
+        "type": "inject",
+        "z": "e0b5470536da3afb",
+        "name": "start_off",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 480,
+        "y": 320,
+        "wires": [
+            [
+                "0604180a205b810e",
+                "30c9ab61dbb8aa67",
+                "1f207dc7410c8365",
+                "50f68b4aad6452bc",
+                "5b08c8590c32981e",
+                "b6b16acd6b668a7a",
+                "1f1799eed420eaf7",
+                "05b6f4e19a1b28f9",
+                "3c51865f5e85eaec",
+                "c24c3ca14c053d88",
+                "5007b2e5d327269e",
+                "83b4ac39ab0f7514",
+                "4cc0820af410ee06",
+                "c5867f6c7e4d2b0a",
+                "30e5b3b18a74f7d1",
+                "e1a1a87643df3339"
+            ]
+        ]
     },
     {
         "id": "0a6ce397c0339e17",
@@ -2849,7 +2891,7 @@
         "id": "549a8d8c.df33f4",
         "type": "mqtt-broker",
         "name": "MQTT",
-        "broker": "test.mosquitto.org",
+        "broker": "192.168.188.100",
         "port": "1883",
         "clientid": "",
         "usetls": false,

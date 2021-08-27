@@ -8,15 +8,15 @@
 
 #define ESPPOSITION 3
 // #define BROKER "test.mosquitto.org"
-// #define BROKER "192.168.188.100";
+#define BROKER "192.168.188.100"
 // #define BROKER "192.168.188.26"
-#define BROKER "192.168.137.1"
-// #define SSID "JuergenWalter"
-// #define PASS "44873763559236747268"
+// #define BROKER "192.168.137.1"
+#define SSID "JuergenWalter"
+#define PASS "44873763559236747268"
 // #define SSID "FRITZ!Box 7590 VL"
 // #define PASS "56616967766283031728"
-#define SSID "AbiyyuMufti"
-#define PASS "MaMh1234"
+// #define SSID "AbiyyuMufti"
+// #define PASS "MaMh1234"
 #define PORT 1883
 
 String clientnames[] = {"1_1", "1_2", "1_3", "1_4", 
@@ -52,6 +52,7 @@ void setup() {
   display.begin(SSD1306_SWITCHCAPVCC, 0x3C);  // initialize with the I2C addr 0x3C (for the 128x32)
   display.clearDisplay();
   display.setTextColor(WHITE);
+  display.println(clientname);  
   display.print("SSID: ");
   display.println(SSID);
   display.print("BROKER: ");
@@ -62,7 +63,7 @@ void setup() {
   display.display();
   delay(1000);
   // If ESP inactive after 5 seconds publish 0 as last will 
-  client.setKeepAlive(5);
+  client.setKeepAlive(1);
   client.enableLastWillMessage(activationTopics.c_str(), "0", true);
   client.enableDebuggingMessages();
 
@@ -103,13 +104,13 @@ bool connectionOk()
   static bool onceWifi = false;
   static bool onceMQTT = false;
   static bool onceShow = false;
-  static String msgs;  
+  static String msgs;
   bool ret = true;
   if(!client.isConnected()){
     ret = false;
     if (!client.isWifiConnected())
     {
-      if(!onceWifi) {msgs = "WIFI NOT CONNECTED\n";}
+      if(!onceWifi) {msgs = clientname + "\nWIFI NOT CONNECTED\n";}
       onceWifi = true;
     }
     if (!client.isMqttConnected())
@@ -125,7 +126,7 @@ bool connectionOk()
       Serial.println("print once ok");
       onceMQTT = false;
       onceWifi = false;
-      msgs = "CONNECTION OK!";
+      msgs = clientname + "\nCONNECTION OK!";
       onceShow = true;
     }
   }

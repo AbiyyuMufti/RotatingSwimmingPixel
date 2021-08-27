@@ -15,24 +15,36 @@ enum LEDState
 {
 	LightOff = 0,
     SingleColor,
-    Gradient,
-	TextGenerator,
-    Random
+    TheatherChase,
+    GradientColor,
+    RainbowColorfull,
+    GenericRainbow,
+    ShootingStar,
+    DimBright,
+    WAMozart
 };
 
+struct Color{
+    byte red;
+    byte green;
+    byte blue;
+};
+
+extern struct Color L_Color;
 extern CRGBArray<64> ledArray;
 extern FastLED_NeoMatrix matrix;
 
-typedef void (*LIGHT_SHOW)(JsonDocument&);
+typedef void (*LIGHT_SHOW)();
 
-void turnOffLight();
-void tapSingleColor(JsonDocument& doc);
-// void gradientColor(JsonDocument& doc);
-void DimBright();
-void TheatherChase();
-void GradientColor();
-void mozart();
+void turn_off_led();
+void single_color();
+void dim_bright();
+void theather_chase();
+void gradient_color();
 void rainbow_colorfull();
-void meteor();
-void GenericRainbow();
+void shooting_star();
+void rainbow_generic();
+void mozart();
+
+
 #endif // __ILLUMINATION_H__
