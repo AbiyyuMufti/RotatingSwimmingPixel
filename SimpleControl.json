@@ -809,187 +809,6 @@
         ]
     },
     {
-        "id": "53270c511dd55a26",
-        "type": "mqtt in",
-        "z": "e0b5470536da3afb",
-        "name": "Activation",
-        "topic": "SwimmingPixel/Motion/+/Activation",
-        "qos": "0",
-        "datatype": "auto",
-        "broker": "549a8d8c.df33f4",
-        "nl": false,
-        "rap": true,
-        "rh": 0,
-        "x": 80,
-        "y": 920,
-        "wires": [
-            [
-                "00e86a5d64b518e4"
-            ]
-        ]
-    },
-    {
-        "id": "00e86a5d64b518e4",
-        "type": "switch",
-        "z": "e0b5470536da3afb",
-        "name": "",
-        "property": "topic",
-        "propertyType": "msg",
-        "rules": [
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/1_1/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/1_2/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/1_3/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/1_4/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/2_1/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/2_2/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/2_3/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/2_4/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/3_1/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/3_2/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/3_3/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/3_4/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/4_1/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/4_2/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/4_3/Activation",
-                "vt": "str"
-            },
-            {
-                "t": "eq",
-                "v": "SwimmingPixel/Motion/4_4/Activation",
-                "vt": "str"
-            }
-        ],
-        "checkall": "true",
-        "repair": true,
-        "outputs": 16,
-        "x": 250,
-        "y": 920,
-        "wires": [
-            [
-                "9044df6dc71673e6",
-                "b82cf408bf9d0c7f"
-            ],
-            [
-                "f7a27cc3b6994d87",
-                "27abdd6967439c54"
-            ],
-            [
-                "c9628a2765594750",
-                "aeba77fb7287dae1"
-            ],
-            [
-                "4bf7631c558a3018",
-                "6d34939345688144"
-            ],
-            [
-                "3f80312a0dc641dc",
-                "c291ec7ae2533642"
-            ],
-            [
-                "31c873fb1f0a49ae",
-                "08c37ffcfa123967"
-            ],
-            [
-                "d16654457a17d62b",
-                "405ad79713f70caf"
-            ],
-            [
-                "71d8e45389dd1d05",
-                "b120d42b72f7d70a"
-            ],
-            [
-                "6ce93e1b1124bdef",
-                "bd978be77b37a19c"
-            ],
-            [
-                "2e253f680e3588dd",
-                "624f2acf549a7967"
-            ],
-            [
-                "99bb418fdf0ac5e5",
-                "342d433da21e4e0f"
-            ],
-            [
-                "7e0bf095289a1f33",
-                "c893ec48353e6ea2"
-            ],
-            [
-                "823b1ef2ca66d5d3",
-                "7a6dee17a9856ccf"
-            ],
-            [
-                "d7f6813e9d61e667",
-                "9b93dc37f0e2f0fd"
-            ],
-            [
-                "7660a7a87c1b10cc",
-                "341fa8dc9da633eb"
-            ],
-            [
-                "2e3a1bdf3029cd77",
-                "b68a756f73a36dc6"
-            ]
-        ]
-    },
-    {
         "id": "c291ec7ae2533642",
         "type": "subflow:7f944b6a3045f1b4",
         "z": "e0b5470536da3afb",
@@ -2798,6 +2617,359 @@
         ]
     },
     {
+        "id": "9a90d011470ab2bf",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/1_1/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "9044df6dc71673e6",
+                "b82cf408bf9d0c7f",
+                "556ef045d8cb1f8f"
+            ]
+        ]
+    },
+    {
+        "id": "a6742db9f7475627",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/1_2/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 460,
+        "wires": [
+            [
+                "f7a27cc3b6994d87",
+                "27abdd6967439c54"
+            ]
+        ]
+    },
+    {
+        "id": "fca162324bddce38",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/1_3/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 540,
+        "wires": [
+            [
+                "c9628a2765594750",
+                "aeba77fb7287dae1"
+            ]
+        ]
+    },
+    {
+        "id": "a3cd74f2909e655e",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/1_4/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 620,
+        "wires": [
+            [
+                "4bf7631c558a3018",
+                "6d34939345688144"
+            ]
+        ]
+    },
+    {
+        "id": "187a2ef26b0a39b8",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/2_1/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 700,
+        "wires": [
+            [
+                "3f80312a0dc641dc",
+                "c291ec7ae2533642"
+            ]
+        ]
+    },
+    {
+        "id": "c14f05ad90eba65b",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/2_2/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 780,
+        "wires": [
+            [
+                "31c873fb1f0a49ae",
+                "08c37ffcfa123967"
+            ]
+        ]
+    },
+    {
+        "id": "3c58598216f601d9",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/2_3/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 860,
+        "wires": [
+            [
+                "d16654457a17d62b",
+                "405ad79713f70caf"
+            ]
+        ]
+    },
+    {
+        "id": "7c7da86c28c3f11f",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/2_4/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 940,
+        "wires": [
+            [
+                "71d8e45389dd1d05",
+                "b120d42b72f7d70a"
+            ]
+        ]
+    },
+    {
+        "id": "06eaaf5e046c0333",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/3_1/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1020,
+        "wires": [
+            [
+                "6ce93e1b1124bdef",
+                "bd978be77b37a19c"
+            ]
+        ]
+    },
+    {
+        "id": "b2f64515e5c54ec2",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/3_2/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1100,
+        "wires": [
+            [
+                "2e253f680e3588dd",
+                "624f2acf549a7967"
+            ]
+        ]
+    },
+    {
+        "id": "4f1d478ccaef5c14",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/3_3/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1180,
+        "wires": [
+            [
+                "99bb418fdf0ac5e5",
+                "342d433da21e4e0f"
+            ]
+        ]
+    },
+    {
+        "id": "425caa075492f801",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/3_4/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1260,
+        "wires": [
+            [
+                "7e0bf095289a1f33",
+                "c893ec48353e6ea2"
+            ]
+        ]
+    },
+    {
+        "id": "b4a8c8e2a177ed27",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/4_1/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1340,
+        "wires": [
+            [
+                "823b1ef2ca66d5d3",
+                "7a6dee17a9856ccf"
+            ]
+        ]
+    },
+    {
+        "id": "fbb2fe7281e4b434",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/4_2/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1420,
+        "wires": [
+            [
+                "d7f6813e9d61e667",
+                "9b93dc37f0e2f0fd"
+            ]
+        ]
+    },
+    {
+        "id": "5062b2aa356c133b",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/4_3/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1500,
+        "wires": [
+            [
+                "7660a7a87c1b10cc",
+                "341fa8dc9da633eb"
+            ]
+        ]
+    },
+    {
+        "id": "2d82533f2c3fd5c0",
+        "type": "mqtt in",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "topic": "SwimmingPixel/Motion/4_4/Activation",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "549a8d8c.df33f4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 190,
+        "y": 1580,
+        "wires": [
+            [
+                "2e3a1bdf3029cd77",
+                "b68a756f73a36dc6"
+            ]
+        ]
+    },
+    {
+        "id": "556ef045d8cb1f8f",
+        "type": "debug",
+        "z": "e0b5470536da3afb",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 240,
+        "y": 320,
+        "wires": []
+    },
+    {
         "id": "0a6ce397c0339e17",
         "type": "ui_spacer",
         "z": "e0b5470536da3afb",
@@ -2891,7 +3063,7 @@
         "id": "549a8d8c.df33f4",
         "type": "mqtt-broker",
         "name": "MQTT",
-        "broker": "192.168.188.100",
+        "broker": "localhost",
         "port": "1883",
         "clientid": "",
         "usetls": false,
