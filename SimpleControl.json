@@ -3063,7 +3063,7 @@
         "id": "549a8d8c.df33f4",
         "type": "mqtt-broker",
         "name": "MQTT",
-        "broker": "localhost",
+        "broker": "192.168.188.100",
         "port": "1883",
         "clientid": "",
         "usetls": false,
@@ -3083,7 +3083,8 @@
         "willQos": "0",
         "willPayload": "",
         "willMsg": {},
-        "sessionExpiry": ""
+        "sessionExpiry": "",
+        "credentials": {}
     },
     {
         "id": "544cd4a12a1c769f",
